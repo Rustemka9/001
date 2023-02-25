@@ -1,26 +1,26 @@
-function TodoForm() {
-  const [data, setData] = useState({ task });
+import { useState } from "react";
+import styles from "./TodoForm.module.css";
 
-  function addTask(event) {
+function TodoForm({ addTodo }) {
+  const [text, setText] = useState("");
+  const onSubmitHandler = (event) => {
     event.preventDefault();
-  }
-
-  function changeTask(event, name) {
-    setData({ ...data, [name]: event.target.value });
-  }
+    addTodo(text);
+    setText("");
+  };
 
   return (
-    <form onSubmit={addTask}>
-      <input
-        placeholder="Enter your task"
-        className="taskInput"
-        value={data.task}
-        onChange={(event)=> changeTask(event, '')}
-      ></input>
-      <button type="submit" className="submit">
-        Submit
-      </button>
-    </form>
+    <div className={styles.todoFormContainer}>
+      <form onSubmit={onSubmitHandler}>
+        <input
+          placeholder="Enter new task"
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        ></input>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 }
 

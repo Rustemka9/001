@@ -1,50 +1,11 @@
-* {
-  background-color: rgb(165, 206, 206);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
 .App {
-  margin: 20px auto;
-  padding: 20px;
-  width: 20%;
-  border: 1px solid grey;
-  border-radius: 10px;
-  display: block;
-  background-color: #ffffff;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 h1 {
-  background-color: #ffffff;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.taskInput {
-  border-radius: 4px;
-  background-color: #ffffff;
-  padding: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.submit {
-  border-radius: 4px;
-  padding: 5px;
-  margin-left: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: antiquewhite;
-}
-
-.action {
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.action > button {
-  margin: 10px;
-  border-radius: 5px;
-  background-color: azure;
-  padding: 5px;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  margin-top: 24px;
 }
