@@ -21,12 +21,46 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const toggleTodoHandler = (id) => {
+    setTodos(
+      todos.map((todo) => {
+        return todo.id === id
+          ? { ...todo, isCompleted: !todo.isCompleted }
+          : { ...todo };
+      })
+    );
+  };
+
+  const resetTodosHandler = () => {
+    setTodos([]);
+  };
+
+  const deleteCompletedTodosHandler = () => {
+    setTodos(todos.filter((todo) => !todo.isCompleted));
+  };
+
+  const completedTodosCount = todos.filter((todo) => todo.isCompleted).length;
+
   return (
     <div className="App">
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodoHandler} />
-      <TodoAction className="todoAction" />
-      <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
+      <TodoAction
+        resetTodos={resetTodosHandler}
+        deleteCompletedTodos={deleteCompletedTodosHandler}
+        todos={todos}
+        completedTodosExist={!!completedTodosCount}
+      />
+      <TodoList
+        todos={todos}
+        deleteTodo={deleteTodoHandler}
+        toggleTodo={toggleTodoHandler}
+      />
+      {completedTodosCount > 0 && (
+        <h3>{`You have completed ${completedTodosCount} ${
+          completedTodosCount > 1 ? "todos" : "todo"
+        }!`}</h3>
+      )}
     </div>
   );
 }

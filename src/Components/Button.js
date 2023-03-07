@@ -1,7 +1,18 @@
-function Button({ text }) {
+import styles from "./Button.module.css";
+
+function Button(props) {
+  const { onClick, children, title, disabled = false } = props;
   return (
     <>
-      <button>{text}</button>
+      <button
+        {...props}
+        className={styles.button}
+        onClick={onClick}
+        title={title}
+        disabled={disabled}
+      >
+        {children}
+      </button>
     </>
   );
 }
