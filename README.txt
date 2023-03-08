@@ -1,6 +1,6 @@
 "Todo app".
 
-Created with React. For launch the application need instal node_modules (npm start).
+Created with React. For launch the application need instal node_modules (npm install) and than launch the app (npm start).
 
 Project structure:
 1) public
