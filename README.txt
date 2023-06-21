@@ -1,6 +1,7 @@
 "Todo app".
+Link: https://mrrustemka.github.io/todo-app/ 
 
-Created with React. For launch the application need instal node_modules (npm install) and than launch the app (npm start).
+Created with React. To launch the application locally you need to install node_modules (npm install) and then, launch the app (npm start).
 
 Project structure:
 1) public
